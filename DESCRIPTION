@@ -1,0 +1,23 @@
+Package: megafun
+Title: Collection of functions for analysis and reporting
+Version: 0.0.0.9000
+Authors@R: 
+    person("Megan", "Holtorf", , "megan.holtorf@gmail.com", role = c("aut", "cre"))
+Description: Collection of functions for simplifying data ceaning, analysis, and generating reports.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    dplyr,
+    labelled,
+    magrittr,
+    tibble,
+    tidyr,
+    gtsummary,
+    kableExtra,
+    rlang, 
+    stats
+Depends: 
+    R (>= 2.10)
+LazyData: true
