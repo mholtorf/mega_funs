@@ -44,7 +44,7 @@ apply_dictionary <- function(data, dictionary, variable_name, variable_label, va
     dplyr::pull({{variable_name}})
 
   # Check that all variable_names in names(data) are integers
-  matched_fields <- intersect(names(data), dictionary_long$variable_name)
+  matched_fields <- intersect(names(data), labelled_cols)
   non_integer_fields <- matched_fields[which(!sapply(data[matched_fields], is.integer))]
 
   if(length(non_integer_fields) > 0) {

@@ -16,8 +16,9 @@ Imports:
     tidyr,
     gtsummary,
     kableExtra,
-    rlang, 
-    stats
+    rlang,
+    stats,
+    megafun
 Depends: 
     R (>= 2.10)
 LazyData: true
