@@ -45,12 +45,12 @@ apply_dictionary <- function(data, dictionary, variable_name, variable_label, va
 
   # Check that all variable_names in names(data) are integers
   matched_fields <- intersect(names(data), labelled_cols)
-  non_integer_fields <- matched_fields[which(!sapply(data[matched_fields], is.integer))]
+  char_fields <- matched_fields[which(sapply(data[matched_fields], is.character))]
 
-  if(length(non_integer_fields) > 0) {
-    stop(paste("Value labels can only be applied to integer fields. The following fields are not of type integer: ", paste(non_integer_fields, collapse = ", ")))
+  if(length(char_fields) > 0) {
+    stop(paste("Value labels can only be applied to integer fields. The following fields are not of type integer: ", paste(char_fields, collapse = ", ")))
   }
-  
+
   for (col_name in names(data)) {
     if (col_name %in% labelled_cols) {
       col_labels <- dictionary_long %>%
