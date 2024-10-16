@@ -61,7 +61,7 @@ apply_dictionary <- function(data, dictionary, variable_name, variable_label, va
 
       label_vector <- setNames(col_labels$value, col_labels$value_label)
       data[[col_name]] <- labelled::set_value_labels(data[[col_name]], label_vector)
-      data[[col_name]] <- labelled::to_factor(data[[col_name]])
+      # data[[col_name]] <- labelled::to_factor(data[[col_name]])
     }
   }
 
